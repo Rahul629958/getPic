@@ -7,10 +7,10 @@ const auth = getAuth(app);
 const flag = false;
 export default function Auth(props)
 {
-   function onButtonClick()
+   function onButtonClick(event)
    {
 
-    createUserWithEmailAndPassword(auth, "thisismyemdgai122l@gmail.com", "thisispassword").then((value)=>(alert("Successfully Signed up"))).catch((error)=>alert(error.code));
+    createUserWithEmailAndPassword(auth, "tisisthemyel@gmail.com", "thisispassword").then((value)=>{props.compM(event);}).catch((error)=>alert(error.code));
     
    }
 
@@ -22,7 +22,7 @@ export default function Auth(props)
            <span> Password : </span>
            <input type="password" placeholder="Password" />
            <p></p>
-           <button name="profileBtn" onClick={function(event){ onButtonClick();props.compM(event);}}>Submit</button>
+           <button name="profileBtn" onClick={function(event){ onButtonClick(event)}}>Submit</button>
         </React.StrictMode>
     );
 }
