@@ -29,7 +29,13 @@ export default function App()
             setFav(true);
             setAuth(false);
             setImg(false);
-        } else if(btnID ==="imgBtn")
+        } else if(btnID ==="authBtn")
+        {
+            setProfile(false);
+            setFav(false);
+            setAuth(true);
+            setImg(false);
+        }  else if(btnID ==="imgBtn")
         {
             setProfile(false);
             setFav(false);
@@ -41,11 +47,11 @@ export default function App()
 
     return (
         <React.StrictMode>
-            <button name="profileBtn" onClick={changeComponent}>Profile</button>
-            <button name="favBtn" onClick={changeComponent}>Fav</button>
+            <button name="profileBtn" onClick={changeComponent} hidden={AuthBtn?true:false}>Profile</button>
+            <button name="favBtn" onClick={changeComponent} hidden={AuthBtn?true:false}>Fav</button>
             {/* <button name="authBtn" onClick={changeComponent}>Auth</button> */}
-            <button name="imgBtn" onClick={changeComponent}>Image</button>
-           {ProfileBtn?<Profile />: FavBtn?<Fav /> :AuthBtn?<Auth />: ImgBtn?<Img /> :<h1>Page Not Found!</h1>}
+            <button name="imgBtn" onClick={changeComponent} hidden={AuthBtn?true:false}>Image</button>
+           {ProfileBtn?<Profile />: FavBtn?<Fav /> :AuthBtn?<Auth compM={changeComponent} />: ImgBtn?<Img /> :<h1>Page Not Found!</h1>}
         </React.StrictMode>
     );
 }
