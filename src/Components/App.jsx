@@ -4,14 +4,15 @@ import Profile from "./Profile";
 import Fav from "./Fav";
 import Auth from "./Auth";
 import Img from "./Img";
-
+import {} from "bootstrap";
+import Navbar from "./Navbar";
 
 export default function App()
 {
     const [ProfileBtn,setProfile] = useState(false);
     const [FavBtn,setFav] = useState(false);
-    const [AuthBtn,setAuth] = useState(true);
-    const [ImgBtn, setImg] = useState(false);
+    const [AuthBtn,setAuth] = useState(false);
+    const [ImgBtn, setImg] = useState(true);
 
    function changeComponent(btnInfo)
     {
@@ -47,10 +48,7 @@ export default function App()
 
     return (
         <React.StrictMode>
-            <button name="profileBtn" onClick={changeComponent} hidden={AuthBtn?true:false}>Profile</button>
-            <button name="favBtn" onClick={changeComponent} hidden={AuthBtn?true:false}>Fav</button>
-            {/* <button name="authBtn" onClick={changeComponent}>Auth</button> */}
-            <button name="imgBtn" onClick={changeComponent} hidden={AuthBtn?true:false}>Image</button>
+            {(!AuthBtn)&&<Navbar compM={changeComponent}/>}
            {ProfileBtn?<Profile />: FavBtn?<Fav /> :AuthBtn?<Auth compM={changeComponent} />: ImgBtn?<Img /> :<h1>Page Not Found!</h1>}
         </React.StrictMode>
     );
