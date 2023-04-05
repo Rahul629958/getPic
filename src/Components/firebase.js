@@ -7,7 +7,8 @@ const firebaseConfig = {
     projectId: "getpic-e04d7",
     storageBucket: "getpic-e04d7.appspot.com",
     messagingSenderId: "725459184395",
-    appId: "1:725459184395:web:cac697d210074b6491900e"
+    appId: "1:725459184395:web:cac697d210074b6491900e",
+    databaseURL: "https://getpic-e04d7-default-rtdb.firebaseio.com/"
   };
 
 const app = initializeApp(firebaseConfig);

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
-import {getAuth,createUserWithEmailAndPassword} from "firebase/auth";
+import {getAuth,createUserWithEmailAndPassword,signInWithEmailAndPassword} from "firebase/auth";
 import app from "./firebase";
 
 const auth = getAuth(app);
@@ -10,8 +10,8 @@ export default function Auth(props)
     const [password,setPassword]=useState("");
    function onButtonClick(event)
    {
-
-    createUserWithEmailAndPassword(auth, email, password).then((value)=>{setEmail("");setPassword(""); props.compM(event);}).catch((error)=>alert(error.code));
+     
+    createUserWithEmailAndPassword(auth, email, password).then((value)=>{signInWithEmailAndPassword(auth,email,password); setEmail("");setPassword(""); props.compM(event);}).catch((error)=>alert(error.code));
     
    }
 
@@ -23,7 +23,22 @@ export default function Auth(props)
            <span> Password : </span>
            <input type="password" placeholder="Password" onChange={(e)=>setPassword(e.target.value)} value={password}/>
            <p></p>
-           <button name="profileBtn" onClick={function(event){ onButtonClick(event)}}>Submit</button>
+           <button name="profileBtn" onClick={function(event){ onButtonClick(event)}}>Sign up</button>
+           
         </React.StrictMode>
     );
 }
+
+
+
+
+// signInWithEmailAndPassword(auth, email, password)
+//   .then((userCredential) => {
+//     // Signed in 
+//     const user = userCredential.user;
+//     // ...
+//   })
+//   .catch((error) => {
+//     const errorCode = error.code;
+//     const errorMessage = error.message;
+//   });
