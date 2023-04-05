@@ -11,37 +11,16 @@ export default function ImageView(props) {
   const user = auth.currentUser;
   const valData = props.imgData;
 
-  
   const [checkAdded, setAdded] = useState(false);
-
-//   if(user!=null)
-//   {
-//     get(ref(db, "users/" + user.uid + "/Img/" + valData.id+'/'))
-//     .then((snapshot) => {
-//        if(snapshot!=null)
-//        {
-//         setAdded(true);
-//        }
-//       })
-//       .catch((err) => {
-//       });
-
-//   }else{
-   
-//   }
-
-   
-
-
 
   function addRemFav() {
     if (checkAdded) {
       //delete from there
-      remove(ref(db, "users/" + user.uid + "/Img/" + valData.id));
+      remove(ref(db,user.uid + "/Img/" + valData.id));
     } else {
       //add to firebase
 
-      set(ref(db, "users/" + user.uid + "/Img/" + valData.id), {
+      set(ref(db, user.uid + "/Img/" + valData.id), {
         ImgURL: valData.src.original,
       });
     }
@@ -64,25 +43,3 @@ export default function ImageView(props) {
     </div>
   );
 }
-
-// function writeUserData(userId, name, email, imageUrl) {
-//   const db = getDatabase();
-//   set(ref(db, 'users/' + userId), {
-//     username: name,
-//     email: email,
-//     profile_picture : imageUrl
-//   });
-// }
-
-// initialise database
-//read
-// const tasksRef = ref(db, "tasks");
-
-// get(tasksRef)
-//   .then((snapshot) => {
-//     const data = snapshot.val();
-//     console.log(data);
-//   })
-//   .catch((err) => {
-//     console.error(err);
-//   });
