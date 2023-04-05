@@ -21,7 +21,7 @@ export default function Img() {
     <div className="container">
       <div className="row">
         {arrVal.map((x) => (
-          <ImageView imgData={x} />
+          <ImageView imgData={x} key={x.id} />
         ))}
       </div>
     </div>

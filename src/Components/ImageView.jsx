@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import { getDatabase, ref, remove, set, get } from "firebase/database";
-import { getAuth } from "firebase/auth";
+import { getAuth,signInWithEmailAndPassword } from "firebase/auth";
 import app from "./firebase";
 
 const auth = getAuth(app);
@@ -16,7 +16,7 @@ export default function ImageView(props) {
   function addRemFav() {
     if (checkAdded) {
       //delete from there
-      remove(ref(db,user.uid + "/Img/" + valData.id));
+      remove(ref(db, user.uid + "/Img/" + valData.id));
     } else {
       //add to firebase
 
@@ -29,9 +29,11 @@ export default function ImageView(props) {
   }
 
   return (
-    <div
+    <div 
+    
       className="col-lg-3 col-md-6 col-sm-12"
       style={{ paddingBottom: "10px" }}
+      
     >
       <div
         style={{ position: "absolute", marginLeft: "75%", marginTop: 0 }}
@@ -39,7 +41,7 @@ export default function ImageView(props) {
       >
         <h1>{checkAdded ? "-" : "+"}</h1>
       </div>
-      <img src={valData.src.original} style={{ width: "100%" }}></img>
+      <img  src={valData.src.original} style={{ width: "100%" }}></img>
     </div>
   );
 }
