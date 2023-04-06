@@ -11,9 +11,9 @@ export default function Navbar(props)
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>
-  <div className="collapse navbar-collapse" id="navbarText">
+  <div className="collapse navbar-collapse" id="navbarText" style={{marginLeft:"80%"}}>
     <ul className="navbar-nav mr-auto">
-      <li className="nav-item active">
+      <li className="nav-item">
         <a className="nav-link" name="imgBtn" onClick={props.compM}>Home <span className="sr-only">(current)</span></a>
       </li>
       <li className="nav-item">

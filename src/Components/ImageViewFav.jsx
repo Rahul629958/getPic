@@ -20,8 +20,7 @@ export default function ImageViewFav(props)
       className="col-lg-3 col-md-6 col-sm-12"
       style={{ paddingBottom: "10px" }} >
        
-        {/* <img src={objVal!=null?(objVal.src!=null?objVal.src.small:""):""} alt='nature image'/>
-         */}
+
          <img src={props.imgObj.ImgURL} alt='nature image' style={{width:"100%"}}></img>
         </div>
         
