@@ -42,8 +42,8 @@ get(child(dbRef,user.uid))
       <h3>{Object.keys(objVal)[0]}</h3>
       <div className="container">
       <div className="row">
-        {Object.keys(objVal).map((x) => (
-          <ImageViewFav imgID={x} key={x} />
+        {Object.values(objVal).map((x) => (
+          <ImageViewFav imgObj={x} key={x.ImgURL} />
         ))}
       </div>
     </div>

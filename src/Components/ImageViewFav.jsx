@@ -1,26 +1,28 @@
 import React, { useState } from 'react';
-import { createClient } from 'pexels';
-
-const client = createClient('n5JnI2uR4dlQnkk1bUGu5sSpL0igFPrPfNxTL3vrzfpWgkibzdCBKmxG');
+// import { createClient } from 'pexels';
 
 
 
+
+// const client = createClient('n5JnI2uR4dlQnkk1bUGu5sSpL0igFPrPfNxTL3vrzfpWgkibzdCBKmxG');
 export default function ImageViewFav(props)
 {
-    const [objVal,setObj]= useState({});
-    client.photos.show({ id: props.imgID }).then(photo => {
-       setObj(photo);
-    }).catch((error)=>console.log(error));
+ 
+    // const [objVal,setObj]= useState({});
+    // client.photos.show({ id: props.imgID }).then(photo =>
+    //    setObj(photo)
+    // );
     
 
 
     return (
         <div 
-    
       className="col-lg-3 col-md-6 col-sm-12"
       style={{ paddingBottom: "10px" }} >
        
-        <img src={objVal!=null?(objVal.src!=null?objVal.src.small:""):""} />
+        {/* <img src={objVal!=null?(objVal.src!=null?objVal.src.small:""):""} alt='nature image'/>
+         */}
+         <img src={props.imgObj.ImgURL} alt='nature image' style={{width:"100%"}}></img>
         </div>
         
     )

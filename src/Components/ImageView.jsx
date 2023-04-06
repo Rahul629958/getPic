@@ -21,7 +21,7 @@ export default function ImageView(props) {
       //add to firebase
 
       set(ref(db, user.uid + "/Img/" + valData.id), {
-        ImgURL: valData.src.original,
+        ImgURL: valData.src.small,
       });
     }
 
@@ -41,7 +41,7 @@ export default function ImageView(props) {
       >
         <h1>{checkAdded ? "-" : "+"}</h1>
       </div>
-      <img  src={valData.src.original} style={{ width: "100%" }}></img>
+      <img  src={valData.src.small} style={{ width: "100%" }}></img>
     </div>
   );
 }
