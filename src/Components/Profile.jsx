@@ -14,7 +14,7 @@ export default function Profile()
     return (
         <React.StrictMode>
         
-           <h1> {user!=null?"User is signed in":"No user is signed in"}</h1>
+           <h1> {user!=null? user.email+" is signed in":"No user is signed in"}</h1>
         </React.StrictMode>
     );
 }

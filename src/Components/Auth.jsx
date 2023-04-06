@@ -11,8 +11,8 @@ export default function Auth(props)
    function onButtonClick(event)
    {
      
-    createUserWithEmailAndPassword(auth, email, password).then((value)=>{signInWithEmailAndPassword(auth,email,password); setEmail("");setPassword(""); props.compM(event);}).catch((error)=>alert(error.code));
-    
+    // createUserWithEmailAndPassword(auth, email, password).then((value)=>{signInWithEmailAndPassword(auth,email,password); setEmail("");setPassword(""); props.compM(event);}).catch((error)=>alert(error.code));
+    signInWithEmailAndPassword(auth,email,password); setEmail("");setPassword(""); props.compM(event);
    }
 
     return (
