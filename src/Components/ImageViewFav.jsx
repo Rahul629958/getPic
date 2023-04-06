@@ -15,7 +15,13 @@ export default function ImageViewFav(props)
 
 
     return (
+        <div 
+    
+      className="col-lg-3 col-md-6 col-sm-12"
+      style={{ paddingBottom: "10px" }} >
+       
         <img src={objVal!=null?(objVal.src!=null?objVal.src.small:""):""} />
+        </div>
         
     )
 
