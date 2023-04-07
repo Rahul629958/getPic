@@ -1,0 +1,41 @@
+.leftBox, .rightBox
+{
+ 
+
+}
+
+.leftBox .row{
+  margin:10% auto 29% 10%;
+}
+.leftBox h1{
+    margin-top: 15%;
+    margin-left: 20%;
+    font-size: 7rem;
+    font-family:cursive;
+    font-weight: bold;
+    color:#EE7C53;
+}
+
+.rightBox
+{
+
+}
+
+.inputHome
+{
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+
+}
+.inputHome :hover{
+    
+}
+
+.btnHome
+{
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+}
+
+
+/* A good snapshot keeps a moment that s gone from running away. */

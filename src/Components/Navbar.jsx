@@ -24,7 +24,7 @@ export default function Navbar(props)
     {/* </form> */}
     <ul className="navbar-nav mr-auto" style={{marginLeft:"30%"}}>
       <li className="nav-item">
-        <a className="nav-link homeBtn" name="imgBtn" onClick={props.compM} style={{color:"#ffffff"}}>Home <span className="sr-only">(current)</span></a>
+        <a className="nav-link homeBtn" name="homeBtn" onClick={props.compM} style={{color:"#ffffff"}}>Home <span className="sr-only">(current)</span></a>
       </li>
       <li className="nav-item">
         <a className="nav-link favBtn" name="favBtn" onClick={props.compM} style={{color:"#ffffff"}}>Favourites</a>
