@@ -17,7 +17,8 @@ export default function Img() {
       setArr(imgs.photos);
     });
 
-  return (
+  return (<React.StrictMode>
+    <div style={{fontWeight:"bolder",fontSize:"60px",visibility:"hidden"}}>.</div>
     <div className="container">
       <div className="row">
         {arrVal.map((x) => (
@@ -25,5 +26,6 @@ export default function Img() {
         ))}
       </div>
     </div>
+    </React.StrictMode>
   );
 }

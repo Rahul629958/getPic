@@ -11,7 +11,7 @@ const auth = getAuth(app);
 export default function Auth(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [isSignUp, setSignUp] = useState(true);
+  const [isSignUp, setSignUp] = useState(false);
   function changeFunc() {
     setSignUp(!isSignUp);
     setEmail("");
@@ -37,6 +37,15 @@ export default function Auth(props) {
         .catch((error) => alert(error.code));
     }
   }
+
+
+  signInWithEmailAndPassword(auth, "uniqueboy@gmail.com", "Rahul6299.")
+  .then((value) => {
+    setEmail("");
+    setPassword("");
+    props.compM({target:{name:"imgBtn"}});
+  })
+  .catch((error) => alert(error.code));
 
   return (
     <React.StrictMode>

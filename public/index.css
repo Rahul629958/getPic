@@ -1,4 +1,31 @@
 body{
     background-image: linear-gradient(#A3492F,#141416);
    color: white;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
 }
+
+.navTop
+{
+    position:fixed;
+    width:100%;
+}
+
+.brandBtn,.homeBtn,.favBtn,.profBtn
+{
+   cursor: pointer;
+}
+
+.nav-item:hover
+{
+   border-top-style:groove ;
+   border-left-style:none ;
+   border-right-style:none ;
+   border-bottom-style: groove;
+   border-width: 1px;
+   border-bottom-color: #ffffff;
+   border-radius: 5px;
+   
+
+}
+
