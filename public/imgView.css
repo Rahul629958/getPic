@@ -1,0 +1,18 @@
+
+.imgDiv{
+    background-color:transparent;
+    border-radius: 1rem;
+}
+
+.imgDiv:hover{
+  
+    background-color: #fdbba3;
+    animation-name: imgColor;
+    animation-duration: 1s;
+}
+
+
+@keyframes imgColor {
+    from {background-color: transparent;}
+    to {background-color: #fdbba3;}
+}

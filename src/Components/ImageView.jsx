@@ -21,27 +21,35 @@ export default function ImageView(props) {
       //add to firebase
 
       set(ref(db, user.uid + "/Img/" + valData.id), {
-        ImgURL: valData.src.small,
+        ImgURL: valData.src.original,
       });
     }
 
     setAdded(!checkAdded);
   }
 
+
+
+
+
+
   return (
     <div 
     
-      className="col-lg-3 col-md-6 col-sm-12"
-      style={{ paddingBottom: "10px" }}
-      
+      className="col-lg-3 col-md-6 col-sm-12 imgDiv"
+      style={{ paddingBottom: "10px",paddingTop:"10px"}}
     >
       <div
-        style={{ position: "absolute", marginLeft: "75%", marginTop: 0 }}
+        style={{ position: "absolute",marginTop:"60%", height:"60px",backgroundColor:"inherit",borderTopRightRadius:"1rem",borderBottomRightRadius:"1rem",opacity:"inherit"}}
+        
         onClick={addRemFav}
+      
       >
-        <h1>{checkAdded ? "-" : "+"}</h1>
+        <h1 className="iconTag" style={{padding:"5px"}}>{checkAdded ?  "❤️":"🤍" }</h1>
       </div>
-      <img  src={valData.src.small} style={{ width: "100%" }}></img>
+      <img src={valData.src.small} style={{ width: "100%" ,borderStyle:"solid", borderRadius:"1rem",borderWidth:"1px", opacity:"100%",borderColor:"black"}} ></img>
     </div>
   );
 }
+
+

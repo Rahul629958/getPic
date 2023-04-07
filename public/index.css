@@ -29,3 +29,13 @@ body{
 
 }
 
+.iconTag:hover
+{
+/* 
+    border-style: solid;*/
+    background-color: pink;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  
+}
+
