@@ -47,7 +47,9 @@ export default function ImageView(props) {
       >
         <h1 className="iconTag" style={{padding:"5px"}}>{checkAdded ?  "❤️":"🤍" }</h1>
       </div>
+      <a href={valData.src.original} target="_blank" download={"getPic"+valData.id+".jpg"}>
       <img src={valData.src.original} style={{ width: "100%" ,borderStyle:"solid", borderRadius:"1rem",borderWidth:"1px", opacity:"100%",borderColor:"black"}} ></img>
+      </a>
     </div>
   );
 }

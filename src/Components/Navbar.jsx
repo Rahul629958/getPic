@@ -12,7 +12,7 @@ export default function Navbar(props)
 
     return (
       <div style={{zIndex:2}} className="navTop">
-        <nav className="navbar navbar-expand-lg navbar-light " style={{backgroundColor:"#533F4D"}} >
+        <nav className="navbar navbar-expand-lg navbar-light " style={{backgroundColor:"#533F4D",opacity:0.9}} >
   <a className="navbar-brand brandBtn" name="imgBtn" onClick={props.compM} style={{color:"#EE7C53",fontWeight:"bold", fontSize:"30px", fontFamily:"cursive",marginLeft:"4rem"}}>getPic</a>
   <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>

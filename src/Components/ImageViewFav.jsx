@@ -39,8 +39,9 @@ function RemFav() {
       >
         <h1 className="iconTag" style={{padding:"5px"}}>{checkAdded ?  "❤️":"🤍" }</h1>
       </div>
-
-         <img src={props.imgObj[1].ImgURL} alt='nature image' style={{width:"100%",borderStyle:"solid", borderRadius:"1rem",borderWidth:"1px", opacity:"100%",borderColor:"black"}}></img>
+      <a href={props.imgObj[1].ImgURL} target='_blank' download>
+         <img src={props.imgObj[1].ImgURL} className='imgSRC' alt='nature image' style={{width:"100%",borderStyle:"solid", borderRadius:"1rem",borderWidth:"0px", opacity:"100%"}}></img>
+         </a>
         </div>
         
     )

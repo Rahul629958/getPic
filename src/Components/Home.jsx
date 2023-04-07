@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import pic1 from "../Images/pic1.jpg";
+import pic2 from "../Images/pic2.jpg";
+import pic3 from "../Images/pic3.jpg";
+import pic4 from "../Images/pic4.jpg";
 
 export default function Home(props) {
   const [queryVal, setQuery] = useState("");
@@ -33,9 +37,26 @@ export default function Home(props) {
                 Search
               </button>
             </div>
+            <p>A good snapshot keeps a moment that's gone from running away.</p>
+            
           </div>
           <div className="col-lg-6 col-md-12 rightBox">
-            <h2>Hi there 2</h2>
+            <div className="containerCustom">
+              <div class="wrapper">
+                {/* <img className="imgInC" src={pic1} /> */}
+                <img className="imgInC" src={pic2} />
+                <img className="imgInC" src={pic3} />
+                <img className="imgInC" src={pic4} />
+                <img
+                  className="imgInC"
+                  src="https://images.pexels.com/photos/2215380/pexels-photo-2215380.jpeg"
+                />
+                {/*<img className="imgInC"  src="https://images.pexels.com/photos/2215380/pexels-photo-2215380.jpeg"/>
+            <img className="imgInC"  src="https://images.pexels.com/photos/2215380/pexels-photo-2215380.jpeg"/>
+            <img className="imgInC"  src="https://images.pexels.com/photos/2215380/pexels-photo-2215380.jpeg"/> */}
+              </div>
+            </div>
+            <p><a href = "mailto: rahulsoniubr@gmail.com">Contact me</a></p>
           </div>
         </div>
       </div>

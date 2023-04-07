@@ -5,7 +5,7 @@
 }
 
 .leftBox .row{
-  margin:10% auto 29% 10%;
+  margin:10% auto 8% 10%;
 }
 .leftBox h1{
     margin-top: 15%;
@@ -16,9 +16,16 @@
     color:#EE7C53;
 }
 
-.rightBox
-{
 
+.leftBox p{
+     margin-left: 12%;
+     margin-bottom: 20%;
+     font-family: cursive;
+}
+
+.rightBox p
+{
+  margin:80% auto auto 85%;
 }
 
 .inputHome
@@ -39,3 +46,70 @@
 
 
 /* A good snapshot keeps a moment that s gone from running away. */
+
+
+
+.containerCustom{
+    width: fit-content;
+    position: absolute;
+    /* transform: translate(-50%,-50%); */
+    /* top: 50%;
+    left: 50%; */
+    overflow: hidden;
+    margin-left: 15%;
+    border-radius: 2rem;
+    border-width: 5px;
+    border-style: groove;
+   
+     box-shadow: 10px 25px 40px rgba(255, 255, 255, 0.3);
+     box-shadow: -10px 25px 40px rgba(255, 255, 255, 0.3); 
+}
+.wrapper{
+    height: 500px;
+    width: 500px;
+    display: flex;
+    animation: slide 15s infinite;
+}
+.wrapper:hover
+{
+   animation: changeSize 10s;
+   animation-iteration-count: 1;
+}
+
+
+@keyframes changeSize {
+    0% {height: 500px;width: 500px;}
+    5% {height: 550px; width:550px}
+    100% {height: 500px; width: 500px;}
+}
+
+@keyframes slide{
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(0);
+    }
+    30%{
+        transform: translateX(-100%);
+    }
+    50%{
+        transform: translateX(-100%);
+    }
+    55%{
+        transform: translateX(-200%);
+    }
+    75%{
+        transform: translateX(-200%);
+    }
+    80%{
+        transform: translateX(-300%);
+    }
+    100%{
+        transform: translateX(-300%);
+    }
+}
+imgInC{
+    width: 500px;
+    
+}

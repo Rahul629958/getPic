@@ -2,19 +2,30 @@
 .imgDiv{
     background-color:transparent;
     border-radius: 1rem;
+    border-color: white;
     
 }
 
 .imgDiv:hover{
   
-    background-color: #fdbba3;
+    /* background-color: #fdbba3; */
     animation-name: imgColor;
-    animation-duration: 1s;
-    box-shadow: 0 5px 10px black;
+    animation-duration: 2s;
+    /* box-shadow: 0 5px 10px black; */
 }
 
 
 @keyframes imgColor {
-    from {background-color: transparent;}
-    to {background-color: #fdbba3;}
+    0%{background-color: transparent;}
+    5%{background-color: white;}
+    100%{background-color: transparent;}
+}
+
+.imgSRC:hover{
+    animation-name: rotation;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes rotation {
 }
