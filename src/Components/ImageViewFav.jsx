@@ -51,24 +51,3 @@ function RemFav() {
 }
 
 
-
-
-// export default function Img() {
-//     const [arrVal, setArr] = useState([]);
-  
-//     client.photos
-//       .search({ query, orientation: "square", size: "small", per_page: 24 })
-//       .then((imgs) => {
-//         setArr(imgs.photos);
-//       });
-  
-//     return (
-//       <div className="container">
-//         <div className="row">
-//           {arrVal.map((x) => (
-//             <ImageView imgData={x} key={x.id} />
-//           ))}
-//         </div>
-//       </div>
-//     );
-//   }

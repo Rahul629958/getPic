@@ -55,19 +55,19 @@ export default function Auth(props) {
         {/* <span> Email Id :</span> */}
 
 
-        <div class="input-group mb-3">
-           <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">✉</span>
+        <div className="input-group mb-3">
+           <div className="input-group-prepend">
+              <span className="input-group-text" id="basic-addon1">✉</span>
            </div>
-          <input type="email" class="form-control" placeholder="Enter your email" aria-label="" aria-describedby="basic-addon1"
+          <input type="email" className="form-control" placeholder="Enter your email" aria-label="" aria-describedby="basic-addon1"
                  onChange={(e) => setEmail(e.target.value)}
                  value={email}/>
         </div>
 
 
-        <div class="input-group mb-3">
-           <div class="input-group-prepend">
-              <span class="input-group-text" id="basic-addon1">🔑</span>
+        <div className="input-group mb-3">
+           <div className="input-group-prepend">
+              <span className="input-group-text" id="basic-addon1">🔑</span>
            </div>
           <input type="password" class="form-control" placeholder="Your Password here" aria-label="" aria-describedby="basic-addon1"
                  onChange={(e) => setPassword(e.target.value)}

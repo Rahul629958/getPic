@@ -13,10 +13,11 @@ export default function App()
     const [FavBtn,setFav] = useState(false);
     const [AuthBtn,setAuth] = useState(true);
     const [ImgBtn, setImg] = useState(false);
-
+    const [ImgProps,setImgProps]=useState("");
    function changeComponent(btnInfo)
     {
         const btnID = btnInfo.target.name;
+        
         if(btnID ==="profileBtn")
         {
             setProfile(true);
@@ -37,19 +38,21 @@ export default function App()
             setAuth(true);
             setImg(false);
         }  else if(btnID ==="imgBtn")
-        {
+        {const query = btnInfo.target.dataset.val;
+            
             setProfile(false);
             setFav(false);
             setAuth(false);
             setImg(true);
+            setImgProps(query);
         }
          
     }
-
+//    console.log("This is : " +ImgProps);
     return (
         <React.StrictMode>
             {(!AuthBtn)&&<Navbar compM={changeComponent}/>}
-           {ProfileBtn?<Profile />: FavBtn?<Fav /> :AuthBtn?<Auth compM={changeComponent} />: ImgBtn?<Img /> :<h1>Page Not Found!</h1>}
+           {ProfileBtn?<Profile />: FavBtn?<Fav /> :AuthBtn?<Auth compM={changeComponent} />: ImgBtn?<Img data={ImgProps}/> :<h1>Page Not Found!</h1>}
         </React.StrictMode>
     );
 }
