@@ -37,9 +37,7 @@ get(child(dbRef,user.uid))
 
   return (
     <React.StrictMode>
-      <h1>Hi this is fav after</h1>
-      <h1> {user!=null? user.email+" is signed in":"No user is signed in"}</h1>
-      <h3>{Object.keys(objVal)[0]}</h3>
+     <div style={{fontWeight:"bolder",fontSize:"60px",visibility:"hidden"}}>.</div>
       <div className="container">
       <div className="row">
         {Object.entries(objVal).map((x) => (
