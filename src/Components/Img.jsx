@@ -13,7 +13,7 @@ export default function Img(props) {
 
   
   client.photos
-    .search({ query:props.data, orientation: "square", size: "original", per_page: 18 })
+    .search({ query:props.data, orientation: "square", size: "original", per_page: 20 })
     .then((imgs) => {
       setArr(imgs.photos);
     });
@@ -26,10 +26,10 @@ export default function Img(props) {
     <div style={{fontWeight:"bolder",fontSize:"60px",visibility:"hidden"}}>.</div>
     <div className="container">
       <div className="row">
-        {arrVal.size<1?(<h1 style={{marginTop:"20%",marginLeft:"30%"}}> {":-( "} No Results to show</h1>):
-        (arrVal.map((x) => (
+        {arrVal.length>=1? (arrVal.map((x) => (
           <ImageView imgData={x} key={x.id} />
-        )))}
+        ))):(<h1 style={{marginTop:"20%",marginLeft:"30%"}}> {":-( "} No Results to show</h1>)
+       }
       </div>
     </div>
     </React.StrictMode>

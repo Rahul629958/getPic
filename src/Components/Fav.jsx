@@ -40,9 +40,9 @@ get(child(dbRef,user.uid))
      <div style={{fontWeight:"bolder",fontSize:"60px",visibility:"hidden"}}>.</div>
       <div className="container">
       <div className="row">
-        {Object.entries(objVal).map((x) => (
+        {Object.entries(objVal).length>=1?(Object.entries(objVal).map((x) => (
           <ImageViewFav imgObj={x} key={x[0]} />
-        ))}
+        ))):(<h1 style={{marginTop:"20%",marginLeft:"30%"}}> {":-( "} No Results to show</h1>)}
       </div>
     </div>
     {/* <ImageViewFav imgID="2894944"/> */}

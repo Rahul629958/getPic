@@ -13,9 +13,9 @@ export default function App()
 {
     const [ProfileBtn,setProfile] = useState(false);
     const [FavBtn,setFav] = useState(false);
-    const [AuthBtn,setAuth] = useState(false);
+    const [AuthBtn,setAuth] = useState(true);
     const [ImgBtn, setImg] = useState(false);
-    const [home,setHome] = useState(true);
+    const [home,setHome] = useState(false);
     const [ImgProps,setImgProps]=useState("");
    function changeComponent(btnInfo)
     {

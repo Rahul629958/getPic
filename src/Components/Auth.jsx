@@ -39,18 +39,12 @@ export default function Auth(props) {
   }
 
 
-  signInWithEmailAndPassword(auth, "uniqueboy@gmail.com", "Rahul6299.")
-  .then((value) => {
-    setEmail("");
-    setPassword("");
-    props.compM({target:{name:"imgBtn"}});
-  })
-  .catch((error) => alert(error.code));
 
   return (
     <React.StrictMode>
+      <h1 style={{fontFamily:"cursive",fontWeight:"bold",fontSize:"5rem",textAlign:"center", marginTop:"6%",color:"#EE7C53"}}>getPic</h1>
       <div className="signUpLogIn container">
-        <h1> {isSignUp ? "SIGNUP" : "LOGIN"} </h1>
+        <h1 style={{fontSize:"2rem"}}> {isSignUp ? "SIGNUP" : "LOGIN"} </h1>
         <div className="inputSection">
         {/* <span> Email Id :</span> */}
 
@@ -97,7 +91,7 @@ export default function Auth(props) {
         <div className="btnSection">
           {" "}
           <button
-            name="profileBtn"
+            name="homeBtn"
             onClick={function (event) {
               onButtonClick(event);
             }}
