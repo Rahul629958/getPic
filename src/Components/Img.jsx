@@ -25,7 +25,7 @@ export default function Img(props) {
   return (<React.StrictMode>
     <div style={{fontWeight:"bolder",fontSize:"60px",visibility:"hidden"}}>.</div>
     <p style={{textAlign:"center"}}>You are in page : <span style={{color:"yellow"}}>{pageNum}</span></p>
-    <p style={{ textAlign:"center"}}>Goto : <span style={{color:pageNum>1?"#EE7C53":"gray"}}  onClick={(e)=>(pageNum>1&&setPage(pageNum-1))}>previous</span> <span className="nextBtn" onClick={()=>setPage(pageNum+1)}>next</span></p>
+    <p style={{ textAlign:"center"}}>Goto : <span style={{color:pageNum>1?"#EE7C53":"gray"}} className="makePointer" onClick={(e)=>(pageNum>1&&setPage(pageNum-1))}>previous</span> <span className="nextBtn makePointer" onClick={()=>setPage(pageNum+1)}>next</span></p>
     <div className="container">
       <div className="row">
         {arrVal.length>=1? arrVal.map((x) => (
@@ -36,7 +36,7 @@ export default function Img(props) {
         :(<h1 style={{marginTop:"20%",marginLeft:"30%"}}> {":-( "} No Results to show</h1>)
        }
       </div>
-      <p onClick={()=>setPage(pageNum+1)} className="seeMore" style={{textAlign:"center"}}>See more...</p>
+      <p onClick={()=>setPage(pageNum+1)} className="seeMore makePointer" style={{textAlign:"center"}}>See more...</p>
     </div>
     </React.StrictMode>
   );

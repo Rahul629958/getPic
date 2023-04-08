@@ -13,12 +13,12 @@ export default function Fav() {
 const dbRef = ref(db);
 const [objVal,setObj] = useState({});
 
-get(child(dbRef,user.uid))
+get(child(dbRef,user.uid +"/Img"))
 .then((snapshot)=>
 {
   if(snapshot.exists())
   {
-     setObj(snapshot.val().Img);
+     setObj(snapshot.val());
   }else{
     console.log("No data available");
   }

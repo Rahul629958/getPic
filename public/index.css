@@ -56,3 +56,8 @@ body{
 .nextBtn:hover{
     color: yellow;
 }
+
+.makePointer
+{
+    cursor: pointer;
+}

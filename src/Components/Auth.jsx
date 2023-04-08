@@ -5,12 +5,14 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
+import { getDatabase,ref,set } from "firebase/database";
 import app from "./firebase";
 
 const auth = getAuth(app);
 export default function Auth(props) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [name,setName]=useState("");
   const [isSignUp, setSignUp] = useState(false);
   function changeFunc() {
     setSignUp(!isSignUp);
@@ -22,6 +24,15 @@ export default function Auth(props) {
       createUserWithEmailAndPassword(auth, email, password)
         .then((value) => {
           signInWithEmailAndPassword(auth, email, password);
+        const user= auth.currentUser;
+        
+          set(ref(getDatabase(), user.uid + "/profile/"), {
+            name: name
+          });
+
+
+
+
           setEmail("");
           setPassword("");
           props.compM(event);
@@ -47,6 +58,19 @@ export default function Auth(props) {
         <h1 style={{fontSize:"2rem"}}> {isSignUp ? "SIGNUP" : "LOGIN"} </h1>
         <div className="inputSection">
         {/* <span> Email Id :</span> */}
+
+
+
+
+       
+        <div className="input-group mb-3" hidden={!isSignUp}>
+           <div className="input-group-prepend">
+              <span className="input-group-text" id="basic-addon1">👤</span>
+           </div>
+          <input type="text" className="form-control" placeholder="Your name" aria-label="" aria-describedby="basic-addon1"
+                 onChange={(e) => setName(e.target.value)}
+                 value={name}/>
+        </div>
 
 
         <div className="input-group mb-3">
