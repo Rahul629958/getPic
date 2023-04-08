@@ -63,7 +63,7 @@ export default function Auth(props) {
            <div className="input-group-prepend">
               <span className="input-group-text" id="basic-addon1">🔑</span>
            </div>
-          <input type="password" class="form-control" placeholder="Your Password here" aria-label="" aria-describedby="basic-addon1"
+          <input type="password" className="form-control" placeholder="Your Password here" aria-label="" aria-describedby="basic-addon1"
                  onChange={(e) => setPassword(e.target.value)}
                  value={password}/>
         </div>

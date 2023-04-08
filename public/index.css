@@ -39,3 +39,20 @@ body{
   
 }
 
+
+
+.seeMore
+{
+    margin-top:1rem;
+    color:white;
+    font-family: cursive;
+}
+.seeMore:hover{
+    color: yellow;
+}
+.nextBtn
+{
+}
+.nextBtn:hover{
+    color: yellow;
+}

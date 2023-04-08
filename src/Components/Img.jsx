@@ -10,10 +10,10 @@ const client = createClient(
 
 export default function Img(props) {
   const [arrVal, setArr] = useState([]);
-
+  const [pageNum,setPage]=useState(1);
   
   client.photos
-    .search({ query:props.data, orientation: "square", size: "original", per_page: 20 })
+    .search({ query:props.data, orientation: "square", size: "original",page:pageNum, per_page: 20 })
     .then((imgs) => {
       setArr(imgs.photos);
     });
@@ -24,13 +24,19 @@ export default function Img(props) {
 
   return (<React.StrictMode>
     <div style={{fontWeight:"bolder",fontSize:"60px",visibility:"hidden"}}>.</div>
+    <p style={{textAlign:"center"}}>You are in page : <span style={{color:"yellow"}}>{pageNum}</span></p>
+    <p style={{ textAlign:"center"}}>Goto : <span style={{color:pageNum>1?"#EE7C53":"gray"}}  onClick={(e)=>(pageNum>1&&setPage(pageNum-1))}>previous</span> <span className="nextBtn" onClick={()=>setPage(pageNum+1)}>next</span></p>
     <div className="container">
       <div className="row">
-        {arrVal.length>=1? (arrVal.map((x) => (
+        {arrVal.length>=1? arrVal.map((x) => (
           <ImageView imgData={x} key={x.id} />
-        ))):(<h1 style={{marginTop:"20%",marginLeft:"30%"}}> {":-( "} No Results to show</h1>)
+        ))
+        
+        
+        :(<h1 style={{marginTop:"20%",marginLeft:"30%"}}> {":-( "} No Results to show</h1>)
        }
       </div>
+      <p onClick={()=>setPage(pageNum+1)} className="seeMore" style={{textAlign:"center"}}>See more...</p>
     </div>
     </React.StrictMode>
   );
