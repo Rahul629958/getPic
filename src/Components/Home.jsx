@@ -24,7 +24,7 @@ export default function Home(props) {
                 type="search"
                 placeholder="Get your pic here..."
                 aria-label="Search"
-                style={{ width: "20rem" }}
+                style={{ width: "10rem" }}
                 onChange={(e) => setQuery(e.target.value)}
                 value={queryVal}
               />
@@ -42,7 +42,7 @@ export default function Home(props) {
           </div>
           <div className="col-lg-6 col-md-12 rightBox">
             <div className="containerCustom">
-              <div class="wrapper">
+              <div className="wrapper">
                 {/* <img className="imgInC" src={pic1} /> */}
                 <img className="imgInC" src={pic2} />
                 <img className="imgInC" src={pic3} />
@@ -56,7 +56,7 @@ export default function Home(props) {
             <img className="imgInC"  src="https://images.pexels.com/photos/2215380/pexels-photo-2215380.jpeg"/> */}
               </div>
             </div>
-            <p><a href = "mailto: rahulsoniubr@gmail.com">Contact me</a></p>
+            {/* <p><a href = "mailto: rahulsoniubr@gmail.com">Contact me</a></p> */}
           </div>
         </div>
       </div>

@@ -13,7 +13,7 @@ export default function Img(props) {
   const [pageNum,setPage]=useState(1);
   
   client.photos
-    .search({ query:props.data, orientation: "square", size: "original",page:pageNum, per_page: 20 })
+    .search({ query:props.data, orientation: "square", size: "small",page:pageNum, per_page: 18 })
     .then((imgs) => {
       setArr(imgs.photos);
     });

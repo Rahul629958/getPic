@@ -29,7 +29,7 @@ function RemFav() {
 
     return (
         <div 
-      className="col-lg-3 col-md-6 col-sm-12 imgDiv"
+      className="col-lg-4 col-md-6 col-sm-12 imgDiv"
       style={{ paddingBottom: "10px" ,paddingTop:"10px"}} hidden={checkAdded?false:true}>
           <div
         style={{ position: "absolute",marginTop:"60%", height:"60px",backgroundColor:"inherit",borderTopRightRadius:"1rem",borderBottomRightRadius:"1rem",opacity:"inherit"}}

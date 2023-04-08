@@ -25,13 +25,14 @@
 
 .rightBox p
 {
-  margin:80% auto auto 85%;
+  margin:80% auto auto auto;
 }
 
 .inputHome
 {
   border-top-left-radius: 2rem;
   border-bottom-left-radius: 2rem;
+  
 
 }
 .inputHome :hover{
@@ -51,12 +52,13 @@
 
 .containerCustom{
     width: fit-content;
-    position: absolute;
+    position: relative;
     /* transform: translate(-50%,-50%); */
     /* top: 50%;
     left: 50%; */
     overflow: hidden;
-    margin-left: 15%;
+    /* margin-left: 15%; */
+    margin:auto;
     border-radius: 2rem;
     border-width: 5px;
     border-style: groove;

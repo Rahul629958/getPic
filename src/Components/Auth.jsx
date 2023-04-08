@@ -56,14 +56,14 @@ export default function Auth(props) {
       <h1 style={{fontFamily:"cursive",fontWeight:"bold",fontSize:"5rem",textAlign:"center", marginTop:"6%",color:"#EE7C53"}}>getPic</h1>
       <div className="signUpLogIn container">
         <h1 style={{fontSize:"2rem"}}> {isSignUp ? "SIGNUP" : "LOGIN"} </h1>
-        <div className="inputSection">
+        <div className="inputSection ">
         {/* <span> Email Id :</span> */}
 
 
 
-
-       
-        <div className="input-group mb-3" hidden={!isSignUp}>
+      
+       <div className="row">
+        <div className="input-group mb-3 col-lg-6 col-md-9 col-sm-12" hidden={!isSignUp}>
            <div className="input-group-prepend">
               <span className="input-group-text" id="basic-addon1">👤</span>
            </div>
@@ -71,9 +71,10 @@ export default function Auth(props) {
                  onChange={(e) => setName(e.target.value)}
                  value={name}/>
         </div>
+        </div>
 
-
-        <div className="input-group mb-3">
+         <div className="row">
+        <div className="input-group mb-3 col-lg-6 col-md-9 col-sm-12">
            <div className="input-group-prepend">
               <span className="input-group-text" id="basic-addon1">✉</span>
            </div>
@@ -81,15 +82,17 @@ export default function Auth(props) {
                  onChange={(e) => setEmail(e.target.value)}
                  value={email}/>
         </div>
+        </div>
 
-
-        <div className="input-group mb-3">
+        <div className="row"> 
+        <div className="input-group mb-3 col-lg-6 col-md-9 col-sm-12">
            <div className="input-group-prepend">
               <span className="input-group-text" id="basic-addon1">🔑</span>
            </div>
           <input type="password" className="form-control" placeholder="Your Password here" aria-label="" aria-describedby="basic-addon1"
                  onChange={(e) => setPassword(e.target.value)}
                  value={password}/>
+        </div>
         </div>
        
        </div>
